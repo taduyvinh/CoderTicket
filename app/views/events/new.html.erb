@@ -1,0 +1,22 @@
+<div class='container'>
+<%= form_for Event.new, class: 'form-group' do |f| %>
+  Venue: <br>
+  <% f.text_field :venue_id, class: 'form-control' %>  
+  Name: <br>
+  <%= f.text_field :name, class: 'form-control' %>
+  Start: <br>
+  <%= f.datetime_local_field :starts_at, class:'form-control' %>
+  End: <br>
+  <%= f.datetime_local_field :ends_at, class: 'form-control' %>
+  ???: <br>
+  <%= f.text_field :extended_html_description, class: 'form-control' %>
+  Category: <br>
+  <%= f.text_field :category_id, class: 'form-control' %>
+  
+
+  <br>
+        
+  <%= f.submit "Create Event" %>
+
+<% end %>
+</div>d

@@ -1,0 +1,10 @@
+<div class = 'container'>
+  <%= form_for Venue.new do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.label :region %>
+    <%= f.select :region_id, Region.all.collect { |r|  [ r.name, r.id ] }, {class: 'form-control'} %>
+    <%= f.submit "Create", class: 'btn btn-warning' %>
+  <% end %>
+</div>
+

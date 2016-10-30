@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+  resources :users
   root 'events#index'
 
+  get "upcoming" => "events#index"
+
+  get "signup" => "users#new"
+
+  resources :venues
+
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
+  get "logout" => "sessions#destroy"
   resources :events do
     resources :tickets
   end
