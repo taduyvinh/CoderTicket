@@ -1,7 +1,6 @@
 <div class='container'>
 
 <%= form_for @event, class: 'form-group' do |f| %>
-   <%= f.hidden_field :creator_id, :value => current_user.id %>
 
   Name: <br>
   <%= f.text_field :name, class: 'form-control' %>
@@ -24,12 +23,11 @@
     <% end%>
   <% end %>
 
-  <% f.hidden_field :creator_id, :value => current_user.id %>
   
 
   <br>
         
-  <%= f.submit "Create Event" %>
+  <%= f.submit "Update event" %>
 
 <% end %>
 </div>

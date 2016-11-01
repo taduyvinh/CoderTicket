@@ -19,13 +19,14 @@
           </div>
           <div class="clearfix"></div>
         <% end %>
-        <% if current_user %>
           <%= link_to new_event_ticket_path(@event) do %>
             <button class='btn btn-lg btn-block btn-danger'> BOOK NOW </button>
           <% end %>
-        <% else %>
-            <%= link_to "You must log in to buy ticket", login_path, class: 'btn btn-lg btn-block btn-warning' %>
-        <% end %>
+          <br>
+
+          <% if current_user.id == @event.creator_id %>
+            <%= link_to "Edit", edit_event_path, class: 'btn btn-lg btn-block btn-primary' %>
+          <% end %>
           
       </div>
     </div>

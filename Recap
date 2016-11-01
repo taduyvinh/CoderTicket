@@ -1,0 +1,21 @@
+  1. Routes test
+
+  2. Controllers Tests
+      - Request spec: preferred by Rails 5, test routes, and a little bit of views.
+  3. View test
+      - Just give a variable and render: 
+      - Usually good for partial (no layout)
+  4. Features spec:
+  5. Model Test: 
+        ".upcoming" => instance methods
+
+  TIPs for TDD:
+    Write some test cases, expect some results (behavior), add the method name
+  create with exclamation mark: if it cant create, it will crash
+  It's better to validate "venue" rather than validate "venue_id"
+
+  FactoryGirl: 
+    spec/factories/events.rb
+    FactoryGirl.create(:event): make it simple to create event without caring about validations, 
+
+  Comparing floating number ? => compare within certain range
